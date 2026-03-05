@@ -1,499 +1,481 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Treino Academia</title>
 
-    <style>
-      body {
-        margin: 0;
-        font-family: Arial;
-        background: #f2f2f2;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Treino Academia</title>
 
-      .container {
-        max-width: 700px;
-        margin: auto;
-        padding: 15px;
-      }
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial;
+      background: #f2f2f2;
+    }
 
-      .accordion {
-        background: #fff;
-        border-radius: 12px;
-        margin-bottom: 15px;
-        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
-        overflow: hidden;
-      }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      padding: 15px;
+    }
 
-      .accordion-header {
-        padding: 18px;
-        font-weight: bold;
-        cursor: pointer;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
+    .accordion {
+      background: #fff;
+      border-radius: 12px;
+      margin-bottom: 15px;
+      box-shadow: 0 3px 8px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+    }
 
-      .accordion-header::after {
-        content: "+";
-      }
+    .accordion-header {
+      padding: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
 
-      .accordion.active .accordion-header::after {
-        content: "-";
-      }
+    .accordion-header::after {
+      content: "+";
+    }
 
-      .accordion-content {
-        max-height: 0;
-        overflow: hidden;
-        transition: 0.3s ease;
-        padding: 0 15px;
-      }
+    .accordion.active .accordion-header::after {
+      content: "-";
+    }
 
-      .video-item {
-        background: #fafafa;
-        padding: 12px;
-        border-radius: 8px;
-        margin-bottom: 15px;
-      }
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: 0.3s ease;
+      padding: 0 15px;
+    }
 
-      iframe {
-        width: 100%;
-        height: 220px;
-        border-radius: 8px;
-      }
+    .video-item {
+      background: #fafafa;
+      padding: 12px;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
 
-      input {
-        width: 10%;
-        margin-top: 10px;
-        padding: 8px;
-        border-radius: 6px;
-        border: 1px solid #ccc;
-      }
-      .check-container {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        font-weight: bold;
-        cursor: pointer;
-        margin-top: 10px;
-      }
+    iframe {
+      width: 100%;
+      height: 220px;
+      border-radius: 8px;
+    }
 
-      .check-container input {
-        width: auto;
-        margin-top: 0;
-        accent-color: green;
-      }
+    input {
+      width: 10%;
+      margin-top: 10px;
+      padding: 8px;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
 
-      .ultima-data {
-        font-size: 12px;
-        color: #666;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <h1>📋 Treinos</h1>
+    .check-container {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-weight: bold;
+      cursor: pointer;
+      margin-top: 10px;
+    }
 
-      <!-- ================= TREINO 1 ================= -->
-      <div class="accordion">
-        <div class="accordion-header">
-          <span>Peitoral e Tríceps</span>
-          <span class="ultima-data"></span>
+    .check-container input {
+      width: auto;
+      margin-top: 0;
+      accent-color: green;
+    }
+
+    .ultima-data {
+      font-size: 12px;
+      color: #666;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+    <h1>📋 Treinos</h1>
+
+    <!-- ================= TREINO 1 ================= -->
+    <div class="accordion">
+      <div class="accordion-header">
+        <span>Peitoral e Tríceps</span>
+        <span class="ultima-data"></span>
+      </div>
+      <div class="accordion-content">
+        <div class="video-item">
+          <h4>Supino Reto/Artículado</h4>
+
+          <div class="video" data-url="https://www.youtube.com/shorts/0eUtNqAXegc?feature=share"></div>
+
+          Peso utilizado: <input type="number" /> Kg
+
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
         </div>
-        <div class="accordion-content">
-          <div class="video-item">
-            <h4>Supino Reto/Artículado</h4>
 
-            <div
-              class="video"
-              data-url="https://www.youtube.com/shorts/0eUtNqAXegc?feature=share"
-            ></div>
+        <div class="video-item">
+          <h4>Supino Inclinado/Artículado</h4>
 
-            Peso utilizado: <input type="number" /> Kg
+          <div class="video" data-url="https://www.youtube.com/shorts/cmtnoWFEJ7o?feature=share"></div>
 
-            <br /><br />
-            <label class="check-container">
-              <input type="checkbox" />
-              Exercício finalizado
-            </label>
-          </div>
+          Peso utilizado: <input type="number" /> Kg
 
-          <div class="video-item">
-            <h4>Supino Inclinado/Artículado</h4>
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
 
-            <div
-              class="video"
-              data-url="https://www.youtube.com/shorts/cmtnoWFEJ7o?feature=share"
-            ></div>
+        <div class="video-item">
+          <h4>Crucifixo</h4>
 
-            Peso utilizado: <input type="number" /> Kg
+          <div class="video" data-url="https://www.youtube.com/shorts/J9p6bKeuVtY?feature=share"></div>
 
-            <br /><br />
-            <label class="check-container">
-              <input type="checkbox" />
-              Exercício finalizado
-            </label>
-          </div>
+          Peso utilizado: <input type="number" /> Kg
 
-          <div class="video-item">
-            <h4>Crucifixo</h4>
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
 
-            <div
-              class="video"
-              data-url="https://www.youtube.com/shorts/J9p6bKeuVtY?feature=share"
-            ></div>
+        <div class="video-item">
+          <h4>Voador Frente</h4>
 
-            Peso utilizado: <input type="number" /> Kg
+          <div class="video" data-url="https://www.youtube.com/shorts/YbnXodC0pBQ?feature=share"></div>
 
-            <br /><br />
-            <label class="check-container">
-              <input type="checkbox" />
-              Exercício finalizado
-            </label>
-          </div>
+          Peso utilizado: <input type="number" /> Kg
 
-          <div class="video-item">
-            <h4>Voador Frente</h4>
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
 
-            <div
-              class="video"
-              data-url="https://www.youtube.com/shorts/YbnXodC0pBQ?feature=share"
-            ></div>
+        <div class="video-item">
+          <h4>Tríceps Corda/Polia</h4>
 
-            Peso utilizado: <input type="number" /> Kg
+          <div class="video" data-url="https://www.youtube.com/shorts/GxN-pPIgAfM?feature=share"></div>
 
-            <br /><br />
-            <label class="check-container">
-              <input type="checkbox" />
-              Exercício finalizado
-            </label>
-          </div>
+          Peso utilizado: <input type="number" /> Kg
 
-          <div class="video-item">
-            <h4>Tríceps Corda/Polia</h4>
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
 
-            <div
-              class="video"
-              data-url="https://www.youtube.com/shorts/GxN-pPIgAfM?feature=share"
-            ></div>
+        <div class="video-item">
+          <h4>Tríceps na polia pegada supinada</h4>
 
-            Peso utilizado: <input type="number" /> Kg
+          <div class="video" data-url="https://www.youtube.com/shorts/Wv3dy1w3Xs0?feature=share"></div>
 
-            <br /><br />
-            <label class="check-container">
-              <input type="checkbox" />
-              Exercício finalizado
-            </label>
-          </div>
+          Peso utilizado: <input type="number" /> Kg
 
-          <div class="video-item">
-            <h4>Tríceps na polia pegada supinada</h4>
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
 
-            <div
-              class="video"
-              data-url="https://www.youtube.com/shorts/Wv3dy1w3Xs0?feature=share"
-            ></div>
+        <div class="video-item">
+          <h4>Tríceps na polia pegada pronada</h4>
 
-            Peso utilizado: <input type="number" /> Kg
+          <div class="video" data-url="https://www.youtube.com/shorts/FQwlbap02tM?feature=share"></div>
 
-            <br /><br />
-            <label class="check-container">
-              <input type="checkbox" />
-              Exercício finalizado
-            </label>
-          </div>
+          Peso utilizado: <input type="number" /> Kg
 
-          <div class="video-item">
-            <h4>Tríceps na polia pegada pronada</h4>
-
-            <div
-              class="video"
-              data-url="https://www.youtube.com/shorts/FQwlbap02tM?feature=share"
-            ></div>
-
-            Peso utilizado: <input type="number" /> Kg
-
-            <br /><br />
-            <label class="check-container">
-              <input type="checkbox" />
-              Exercício finalizado
-            </label>
-          </div>
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
         </div>
       </div>
-
-      <!-- ================= TREINO 2 ================= -->
-<div class="accordion">
-  <div class="accordion-header">
-    <span>Dorsal e Bíceps</span>
-    <span class="ultima-data"></span>
-  </div>
-
-  <div class="accordion-content">
-
-    <div class="video-item">
-      <h4>Puxada Peitoral/Puxada Alta</h4>
-      <div class="video" data-url="https://www.youtube.com/shorts/yp14vDyCUJA?feature=share"></div>
-
-      Peso utilizado: <input type="number" /> Kg
-      <br /><br />
-      <label class="check-container">
-        <input type="checkbox" />
-        Exercício finalizado
-      </label>
     </div>
 
-    <div class="video-item">
-      <h4>Remada Articulada</h4>
-      <div class="video" data-url="https://www.youtube.com/shorts/ORixSZYXhf8?feature=share"></div>
+    <!-- ================= TREINO 2 ================= -->
+    <div class="accordion">
+      <div class="accordion-header">
+        <span>Dorsal e Bíceps</span>
+        <span class="ultima-data"></span>
+      </div>
 
-      Peso utilizado: <input type="number" /> Kg
-      <br /><br />
-      <label class="check-container">
-        <input type="checkbox" />
-        Exercício finalizado
-      </label>
+      <div class="accordion-content">
+
+        <div class="video-item">
+          <h4>Puxada Peitoral/Puxada Alta</h4>
+          <div class="video" data-url="https://www.youtube.com/shorts/yp14vDyCUJA?feature=share"></div>
+
+          Peso utilizado: <input type="number" /> Kg
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
+
+        <div class="video-item">
+          <h4>Remada Articulada</h4>
+          <div class="video" data-url="https://www.youtube.com/shorts/ORixSZYXhf8?feature=share"></div>
+
+          Peso utilizado: <input type="number" /> Kg
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
+
+        <div class="video-item">
+          <h4>Remada Baixa</h4>
+          <div class="video" data-url="https://www.youtube.com/shorts/Ti_mGuh_Dig?feature=share"></div>
+
+          Peso utilizado: <input type="number" /> Kg
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
+
+        <div class="video-item">
+          <h4>Remada Biarticulada</h4>
+          <div class="video" data-url="https://www.youtube.com/shorts/sDZVig4dHuE?feature=share"></div>
+
+          Peso utilizado: <input type="number" /> Kg
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
+
+        <div class="video-item">
+          <h4>Rosca Scott/Máquina</h4>
+          <div class="video" data-url="https://www.youtube.com/shorts/RR5PSKp8mxY?feature=share"></div>
+
+          Peso utilizado: <input type="number" /> Kg
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
+
+        <div class="video-item">
+          <h4>Rosca Direta/Barra W</h4>
+          <div class="video" data-url="https://www.youtube.com/shorts/6fHxsNMev7I?feature=share"></div>
+
+          Peso utilizado: <input type="number" /> Kg
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
+
+        <div class="video-item">
+          <h4>Rosca Alternada</h4>
+          <div class="video" data-url="https://www.youtube.com/shorts/AFA9QfD5tTE?feature=share"></div>
+
+          Peso utilizado: <input type="number" /> Kg
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
+
+      </div>
     </div>
 
-    <div class="video-item">
-      <h4>Remada Baixa</h4>
-      <div class="video" data-url="https://www.youtube.com/shorts/Ti_mGuh_Dig?feature=share"></div>
+    <!-- ================= TREINO 3 ================= -->
+    <div class="accordion">
+      <div class="accordion-header">
+        <span>Pernas</span>
+        <span class="ultima-data"></span>
+      </div>
 
-      Peso utilizado: <input type="number" /> Kg
-      <br /><br />
-      <label class="check-container">
-        <input type="checkbox" />
-        Exercício finalizado
-      </label>
+      <div class="accordion-content">
+
+        <div class="video-item">
+          <h4>Agachamento Squat</h4>
+          <div class="video" data-url="https://www.youtube.com/shorts/AsQCYlkicLw?feature=share"></div>
+
+          Peso utilizado: <input type="number" /> Kg
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
+
+        <div class="video-item">
+          <h4>Extensão de Joelhos</h4>
+          <div class="video" data-url="https://www.youtube.com/shorts/PzIfB9MiiX8?feature=share"></div>
+
+          Peso utilizado: <input type="number" /> Kg
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
+
+        <div class="video-item">
+          <h4>Abdução de Coxa / Cadeira Abdutora</h4>
+          <div class="video" data-url="https://www.youtube.com/shorts/TB4BwvHaK9o?feature=share"></div>
+
+          Peso utilizado: <input type="number" /> Kg
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
+
+        <div class="video-item">
+          <h4>Adução de Coxa / Cadeira Adutora</h4>
+          <div class="video" data-url="https://www.youtube.com/shorts/lsb18p3cOAk?feature=share"></div>
+
+          Peso utilizado: <input type="number" /> Kg
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
+
+        <div class="video-item">
+          <h4>Leg Press Horizontal</h4>
+          <div class="video" data-url="https://www.youtube.com/shorts/PBnh2I0nxmc?feature=share"></div>
+
+          Peso utilizado: <input type="number" /> Kg
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
+
+        <div class="video-item">
+          <h4>Flexão Panturrilha</h4>
+          <div class="video" data-url="https://www.youtube.com/shorts/cETqVlftyJs?feature=share"></div>
+
+          Peso utilizado: <input type="number" /> Kg
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
+
+      </div>
     </div>
 
-    <div class="video-item">
-      <h4>Remada Biarticulada</h4>
-      <div class="video" data-url="https://www.youtube.com/shorts/sDZVig4dHuE?feature=share"></div>
+    <!-- ================= TREINO 4 ================= -->
+    <div class="accordion">
+      <div class="accordion-header">
+        <span>Ombro e Trapézio</span>
+        <span class="ultima-data"></span>
+      </div>
 
-      Peso utilizado: <input type="number" /> Kg
-      <br /><br />
-      <label class="check-container">
-        <input type="checkbox" />
-        Exercício finalizado
-      </label>
+      <div class="accordion-content">
+
+        <div class="video-item">
+          <h4>Crucifixo Invertido / Voador</h4>
+          <div class="video" data-url="https://www.youtube.com/shorts/-YRf2D2-hhE?feature=share"></div>
+
+          Peso utilizado: <input type="number" /> Kg
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
+
+        <div class="video-item">
+          <h4>Desenvolvimento Frente / Máquina</h4>
+          <div class="video" data-url="https://www.youtube.com/shorts/VFbijwqdsTU?feature=share"></div>
+
+          Peso utilizado: <input type="number" /> Kg
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
+
+        <div class="video-item">
+          <h4>Desenvolvimento Arnold</h4>
+          <div class="video" data-url="https://www.youtube.com/shorts/O3nHTDcdJDo?feature=share"></div>
+
+          Peso utilizado: <input type="number" /> Kg
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
+
+        <div class="video-item">
+          <h4>Elevação Lateral de Ombro / Máquina</h4>
+          <div class="video" data-url="https://www.youtube.com/shorts/j7xmT_IqztY?feature=share"></div>
+
+          Peso utilizado: <input type="number" /> Kg
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
+
+        <div class="video-item">
+          <h4>Elevação Frontal / Polia Baixa</h4>
+          <div class="video" data-url="https://www.youtube.com/shorts/cCMl5hAgFvA?feature=share"></div>
+
+          Peso utilizado: <input type="number" /> Kg
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
+
+        <div class="video-item">
+          <h4>Encolhimento de Ombros / Polia</h4>
+          <div class="video" data-url="https://www.youtube.com/shorts/RuxeLnJrLAI?feature=share"></div>
+
+          Peso utilizado: <input type="number" /> Kg
+          <br /><br />
+          <label class="check-container">
+            <input type="checkbox" />
+            Exercício finalizado
+          </label>
+        </div>
+
+      </div>
     </div>
-
-    <div class="video-item">
-      <h4>Rosca Scott/Máquina</h4>
-      <div class="video" data-url="https://www.youtube.com/shorts/RR5PSKp8mxY?feature=share"></div>
-
-      Peso utilizado: <input type="number" /> Kg
-      <br /><br />
-      <label class="check-container">
-        <input type="checkbox" />
-        Exercício finalizado
-      </label>
-    </div>
-
-    <div class="video-item">
-      <h4>Rosca Direta/Barra W</h4>
-      <div class="video" data-url="https://www.youtube.com/shorts/6fHxsNMev7I?feature=share"></div>
-
-      Peso utilizado: <input type="number" /> Kg
-      <br /><br />
-      <label class="check-container">
-        <input type="checkbox" />
-        Exercício finalizado
-      </label>
-    </div>
-
-    <div class="video-item">
-      <h4>Rosca Alternada</h4>
-      <div class="video" data-url="https://www.youtube.com/shorts/AFA9QfD5tTE?feature=share"></div>
-
-      Peso utilizado: <input type="number" /> Kg
-      <br /><br />
-      <label class="check-container">
-        <input type="checkbox" />
-        Exercício finalizado
-      </label>
-    </div>
-
-  </div>
-</div>
-
-      <!-- ================= TREINO 3 ================= -->
-<div class="accordion">
-  <div class="accordion-header">
-    <span>Pernas</span>
-    <span class="ultima-data"></span>
-  </div>
-
-  <div class="accordion-content">
-
-    <div class="video-item">
-      <h4>Agachamento Squat</h4>
-      <div class="video" data-url="https://www.youtube.com/shorts/AsQCYlkicLw?feature=share"></div>
-
-      Peso utilizado: <input type="number" /> Kg
-      <br /><br />
-      <label class="check-container">
-        <input type="checkbox" />
-        Exercício finalizado
-      </label>
-    </div>
-
-    <div class="video-item">
-      <h4>Extensão de Joelhos</h4>
-      <div class="video" data-url="https://www.youtube.com/shorts/PzIfB9MiiX8?feature=share"></div>
-
-      Peso utilizado: <input type="number" /> Kg
-      <br /><br />
-      <label class="check-container">
-        <input type="checkbox" />
-        Exercício finalizado
-      </label>
-    </div>
-
-    <div class="video-item">
-      <h4>Abdução de Coxa / Cadeira Abdutora</h4>
-      <div class="video" data-url="https://www.youtube.com/shorts/TB4BwvHaK9o?feature=share"></div>
-
-      Peso utilizado: <input type="number" /> Kg
-      <br /><br />
-      <label class="check-container">
-        <input type="checkbox" />
-        Exercício finalizado
-      </label>
-    </div>
-
-    <div class="video-item">
-      <h4>Adução de Coxa / Cadeira Adutora</h4>
-      <div class="video" data-url="https://www.youtube.com/shorts/lsb18p3cOAk?feature=share"></div>
-
-      Peso utilizado: <input type="number" /> Kg
-      <br /><br />
-      <label class="check-container">
-        <input type="checkbox" />
-        Exercício finalizado
-      </label>
-    </div>
-
-    <div class="video-item">
-      <h4>Leg Press Horizontal</h4>
-      <div class="video" data-url="https://www.youtube.com/shorts/PBnh2I0nxmc?feature=share"></div>
-
-      Peso utilizado: <input type="number" /> Kg
-      <br /><br />
-      <label class="check-container">
-        <input type="checkbox" />
-        Exercício finalizado
-      </label>
-    </div>
-
-    <div class="video-item">
-      <h4>Flexão Panturrilha</h4>
-      <div class="video" data-url="https://www.youtube.com/shorts/cETqVlftyJs?feature=share"></div>
-
-      Peso utilizado: <input type="number" /> Kg
-      <br /><br />
-      <label class="check-container">
-        <input type="checkbox" />
-        Exercício finalizado
-      </label>
-    </div>
-
-  </div>
-</div>
-
-      <!-- ================= TREINO 4 ================= -->
-<div class="accordion">
-  <div class="accordion-header">
-    <span>Ombro e Trapézio</span>
-    <span class="ultima-data"></span>
-  </div>
-
-  <div class="accordion-content">
-
-    <div class="video-item">
-      <h4>Crucifixo Invertido / Voador</h4>
-      <div class="video" data-url="https://www.youtube.com/shorts/-YRf2D2-hhE?feature=share"></div>
-
-      Peso utilizado: <input type="number" /> Kg
-      <br /><br />
-      <label class="check-container">
-        <input type="checkbox" />
-        Exercício finalizado
-      </label>
-    </div>
-
-    <div class="video-item">
-      <h4>Desenvolvimento Frente / Máquina</h4>
-      <div class="video" data-url="https://www.youtube.com/shorts/VFbijwqdsTU?feature=share"></div>
-
-      Peso utilizado: <input type="number" /> Kg
-      <br /><br />
-      <label class="check-container">
-        <input type="checkbox" />
-        Exercício finalizado
-      </label>
-    </div>
-
-    <div class="video-item">
-      <h4>Desenvolvimento Arnold</h4>
-      <div class="video" data-url="https://www.youtube.com/shorts/O3nHTDcdJDo?feature=share"></div>
-
-      Peso utilizado: <input type="number" /> Kg
-      <br /><br />
-      <label class="check-container">
-        <input type="checkbox" />
-        Exercício finalizado
-      </label>
-    </div>
-
-    <div class="video-item">
-      <h4>Elevação Lateral de Ombro / Máquina</h4>
-      <div class="video" data-url="https://www.youtube.com/shorts/j7xmT_IqztY?feature=share"></div>
-
-      Peso utilizado: <input type="number" /> Kg
-      <br /><br />
-      <label class="check-container">
-        <input type="checkbox" />
-        Exercício finalizado
-      </label>
-    </div>
-
-    <div class="video-item">
-      <h4>Elevação Frontal / Polia Baixa</h4>
-      <div class="video" data-url="https://www.youtube.com/shorts/cCMl5hAgFvA?feature=share"></div>
-
-      Peso utilizado: <input type="number" /> Kg
-      <br /><br />
-      <label class="check-container">
-        <input type="checkbox" />
-        Exercício finalizado
-      </label>
-    </div>
-
-    <div class="video-item">
-      <h4>Encolhimento de Ombros / Polia</h4>
-      <div class="video" data-url="https://www.youtube.com/shorts/RuxeLnJrLAI?feature=share"></div>
-
-      Peso utilizado: <input type="number" /> Kg
-      <br /><br />
-      <label class="check-container">
-        <input type="checkbox" />
-        Exercício finalizado
-      </label>
-    </div>
-
-  </div>
-</div>
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
+
         // ===== FUNÇÃO PARA EXTRAIR ID DO VÍDEO =====
         function extrairVideoID(url) {
           if (!url) return null;
 
-          // Remove query string
           url = url.split("?")[0];
 
           let id = null;
@@ -506,86 +488,142 @@
             id = url.split("watch?v=")[1];
           }
 
-          // Remove qualquer barra extra
           if (id && id.includes("/")) id = id.split("/")[0];
 
           return id;
         }
 
-        // ===== GERAR EMBED MOBILE FRIENDLY COM REFERRER POLICY =====
+        // ===== GERAR EMBED =====
         function gerarEmbed(id) {
           if (!id) return "";
+
           return `
     <iframe
       width="100%"
       height="220"
       src="https://www.youtube-nocookie.com/embed/${id}?rel=0"
-      title="YouTube video player"
       frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
       allowfullscreen
     ></iframe>
-  `;
+    `;
         }
 
-        // ===== CONVERTER TODOS OS VIDEOS =====
+        // ===== CONVERTER VIDEOS =====
         document.querySelectorAll(".video").forEach((div) => {
           const id = extrairVideoID(div.dataset.url);
           if (!id) return;
-
           div.innerHTML = gerarEmbed(id);
         });
 
         // ===== ACCORDION =====
         document.querySelectorAll(".accordion-header").forEach((header) => {
           header.addEventListener("click", function () {
+
             const acc = this.parentElement;
             const content = this.nextElementSibling;
+
             acc.classList.toggle("active");
+
             content.style.maxHeight = acc.classList.contains("active")
               ? content.scrollHeight + "px"
               : null;
+
           });
         });
 
-      // ===== SALVAR PESO + DATA POR ACCORDION =====
-document.querySelectorAll(".accordion").forEach((acc, accIndex) => {
-  const header = acc.querySelector(".accordion-header");
-  const dataSpan = acc.querySelector(".ultima-data");
-  const input = acc.querySelector('input[type="number"]');
+        // ===== SISTEMA DE SALVAMENTO =====
 
-  const keyPeso = "peso_" + accIndex;
-  const keyData = "data_" + accIndex;
+        const STORAGE_KEY = "treino_academia_v1";
 
-  // Recuperar dados salvos
-  const savedPeso = localStorage.getItem(keyPeso);
-  const savedData = localStorage.getItem(keyData);
-
-  if (savedPeso && input) input.value = savedPeso;
-  if (savedData && dataSpan) {
-    dataSpan.innerText = "Último Treino em: " + savedData;
-  }
-
-  if (input) {
-    input.addEventListener("input", () => {
-      localStorage.setItem(keyPeso, input.value);
-
-      if (input.value !== "") {
-        const hoje = new Date();
-        const dia = String(hoje.getDate()).padStart(2, "0");
-        const mes = String(hoje.getMonth() + 1).padStart(2, "0");
-        const dataFormatada = `${dia}/${mes}`;
-
-        localStorage.setItem(keyData, dataFormatada);
-
-        if (dataSpan) {
-          dataSpan.innerText = "Último Treino em: " + dataFormatada;
+        function carregarDados() {
+          const dados = localStorage.getItem(STORAGE_KEY);
+          return dados ? JSON.parse(dados) : {};
         }
-      }
-    });
-  }
-});
+
+        function salvarDados(dados) {
+          localStorage.setItem(STORAGE_KEY, JSON.stringify(dados));
+        }
+
+        let dadosTreino = carregarDados();
+
+        document.querySelectorAll(".accordion").forEach((acc, accIndex) => {
+
+          const dataSpan = acc.querySelector(".ultima-data");
+          const exercicios = acc.querySelectorAll(".video-item");
+
+          exercicios.forEach((item, exIndex) => {
+
+            const input = item.querySelector('input[type="number"]');
+            const check = item.querySelector('input[type="checkbox"]');
+
+            const id = `acc_${accIndex}_ex_${exIndex}`;
+
+            if (!dadosTreino[id]) dadosTreino[id] = {};
+
+            // ===== RECUPERAR PESO =====
+            if (dadosTreino[id].peso && input) {
+              input.value = dadosTreino[id].peso;
+            }
+
+            // ===== RECUPERAR CHECK =====
+            if (dadosTreino[id].check && check) {
+              check.checked = dadosTreino[id].check;
+            }
+
+            // ===== EVENTO PESO =====
+            if (input) {
+              input.addEventListener("input", () => {
+
+                dadosTreino[id].peso = input.value;
+
+                if (input.value !== "") {
+
+                  const hoje = new Date();
+                  const dia = String(hoje.getDate()).padStart(2, "0");
+                  const mes = String(hoje.getMonth() + 1).padStart(2, "0");
+
+                  const dataFormatada = `${dia}/${mes}`;
+
+                  dadosTreino[id].data = dataFormatada;
+
+                  if (dataSpan) {
+                    dataSpan.innerText = "Último Treino em: " + dataFormatada;
+                  }
+
+                }
+
+                salvarDados(dadosTreino);
+
+              });
+            }
+
+            // ===== EVENTO CHECKBOX =====
+            if (check) {
+              check.addEventListener("change", () => {
+
+                dadosTreino[id].check = check.checked;
+
+                salvarDados(dadosTreino);
+
+              });
+            }
+
+          });
+
+          // ===== MOSTRAR ÚLTIMA DATA =====
+          const datas = Object.values(dadosTreino)
+            .filter(d => d.data)
+            .map(d => d.data);
+
+          if (datas.length && dataSpan) {
+            dataSpan.innerText = "Último Treino em: " + datas[datas.length - 1];
+          }
+
+        });
+
       });
     </script>
-  </body>
+</body>
+
 </html>
